@@ -1,2 +1,11 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+    import { Input } from '@sveltestrap/sveltestrap';
+</script>
+
+<p>Home Square Footage</p>
+<Input type="number" placeholder="number placeholder" />
+<br/>
+<Input type="range" min={0} max={100} step={10} placeholder="range placeholder" />
+<p>Basement</p>
+<Input type="checkbox" placeholder="number placeholder" />
+<p>Amount</p>
