@@ -70,12 +70,45 @@
     }
 
     input[type="range"] {
+        -webkit-appearance: none;
+        appearance: none; 
         width: 100%;
-        height: 4px;
-        background: #007bff;
+        cursor: pointer;
         outline: none;
-        border-radius: 5px;
-        transition: background-color 0.3s;
+        overflow: hidden;
+        border-radius: 16px;
+    }
+
+    input[type="range"]::-webkit-slider-runnable-track {
+        height: 12px;
+        background: #ccc;
+        border-radius: 16px;
+    }
+
+    input[type="range"]::-moz-range-track {
+        height: 12px;
+        background: #ccc;
+        border-radius: 16px;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none; 
+        height: 12px;
+        width: 12px;
+        background-color: #fff;
+        border-radius: 50%;
+        border: 2px solid #007bff;
+        box-shadow: -407px 0 0 400px #007bff;
+    }
+
+    input[type="range"]::-moz-range-thumb {
+        height: 12px;
+        width: 12px;
+        background-color: #fff;
+        border-radius: 50%;
+        border: 1px solid #007bff;
+        box-shadow: -407px 0 0 400px #007bff;
     }
 
     .checkbox-group {
@@ -86,12 +119,34 @@
     }
 
     .checkbox-group input[type="checkbox"] {
-        transform: scale(1);
-        transition: transform 0.2s ease;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #007bff;
+        border-radius: 50%;
+        background-color: transparent;
+        display: inline-block;
+        position: relative;
+        margin-right: 10px;
+        cursor: pointer;
     }
 
-    .checkbox-group input[type="checkbox"]:checked {
-        transform: scale(1.2);
+    .checkbox-group input[type="checkbox"]:before {
+        content: "";
+        background-color: #007bff;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        transition: 0.05s;
+    }
+
+    .checkbox-group input[type="checkbox"]:checked:before {
+        transform: translate(-50%, -50%) scale(1);
     }
 
     .checkbox-label {
