@@ -117,46 +117,22 @@
 
     .checkbox-group {
         display: flex;
+        flex-direction: column;
         align-items: center;
         gap: 0.5rem;
         transition: all 0.3s ease;
     }
+    .checkbox-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
     .checkbox-group input[type="checkbox"] {
-        appearance: none;
-        width: 20px;
-        height: 20px;
-        border: 2px solid #ccc;
-        border-radius: 50%;
-        background-color: transparent;
-        display: inline-block;
-        position: relative;
-        margin-right: 10px;
-        cursor: pointer;
-        transition: 250ms;
+        height: 1rem;
+        width: 1rem;
     }
 
-    .checkbox-group input[type="checkbox"]:hover {
-        border-color: #007bff;
-    }
-
-    .checkbox-group input[type="checkbox"]:before {
-        content: "";
-        background-color: #007bff;
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(0);
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        transition: 0.05s;
-    }
-
-    .checkbox-group input[type="checkbox"]:checked:before {
-        transform: translate(-50%, -50%) scale(1);
-    }
 
     .checkbox-label {
         font-size: 1rem;
@@ -212,25 +188,29 @@
                 max="10000"
                 aria-label="Main Square Footage"
             />
-            <input
+        </div>
+        <br />
+        <input
                 type="range"
                 min="100"
                 max="10000"
                 bind:value={mainSquareFootage}
                 aria-label="Main Square Footage Slider"
+        />
+    </div>
+
+    <div class="form-group checkbox-group">
+        <label for="hasBasement" class="checkbox-label">Has Basement?</label>
+        <div class="checkbox-container">
+            <input
+                    type="checkbox"
+                    bind:checked={hasBasement}
+                    id="hasBasement"
+                    aria-describedby="basementDescription"
             />
         </div>
     </div>
 
-    <div class="form-group checkbox-group">
-        <input
-            type="checkbox"
-            bind:checked={hasBasement}
-            id="hasBasement"
-            aria-describedby="basementDescription"
-        />
-        <label for="hasBasement" class="checkbox-label">Has Basement</label>
-    </div>
 
     <!-- {#if hasBasement} -->
         <div class="form-group basement-group">
@@ -243,14 +223,15 @@
                     max="5000"
                     aria-label="Basement Square Footage"
                 />
-                <input
+            </div>
+            <br />
+            <input
                     type="range"
                     min="100"
                     max="5000"
                     bind:value={basementSquareFootage}
                     aria-label="Basement Square Footage Slider"
-                />
-            </div>
+            />
         </div>
     <!-- {/if} -->
 
