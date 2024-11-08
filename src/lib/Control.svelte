@@ -2,6 +2,10 @@
     let mainSquareFootage = 1000;
     let hasBasement = false;
     let basementSquareFootage = 500;
+
+    function handleFormSubimission() {
+        console.log(mainSquareFootage / 2);
+    }
 </script>
 
 <style>
@@ -17,12 +21,12 @@
     }
 
     .component-container {
-        background-color: white;
+        background-color: #fff;
         padding: 2rem;
-        border-radius: 25px;
+        border-radius: 15px;
         max-width: 400px;
         width: 100%;
-        border: 2px solid #007bff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         transform: translateY(20px);
         opacity: 0;
         animation: fadeInUp 0.5s ease forwards;
@@ -58,14 +62,14 @@
     input[type="number"] {
         width: 100%;
         padding: 0.5rem;
-        border: 1px solid #ced4da;
+        border: 2px solid #ced4da;
         border-radius: 8px;
         outline: none;
         font-size: 1rem;
-        transition: border-color 0.3s ease;
+        transition: 250ms;
     }
 
-    input[type="number"]:focus {
+    input[type="number"]:hover {
         border-color: #007bff;
     }
 
@@ -122,13 +126,18 @@
         appearance: none;
         width: 20px;
         height: 20px;
-        border: 2px solid #007bff;
+        border: 2px solid #ccc;
         border-radius: 50%;
         background-color: transparent;
         display: inline-block;
         position: relative;
         margin-right: 10px;
         cursor: pointer;
+        transition: 250ms;
+    }
+
+    .checkbox-group input[type="checkbox"]:hover {
+        border-color: #007bff;
     }
 
     .checkbox-group input[type="checkbox"]:before {
@@ -151,8 +160,9 @@
 
     .checkbox-label {
         font-size: 1rem;
-        color: #495057;
+        color: #333;
         transition: color 0.3s ease;
+        cursor: pointer;
     }
 
     .submit-btn {
@@ -244,5 +254,5 @@
         </div>
     <!-- {/if} -->
 
-    <button class="submit-btn">Submit</button>
+    <button on:click={handleFormSubimission} class="submit-btn">Submit</button>
 </div>
