@@ -1,11 +1,13 @@
 <script>
-    import { Input } from '@sveltestrap/sveltestrap';
+    import Control from "../lib/Control.svelte"
 </script>
 
-<p>Home Square Footage</p>
+<Control></Control>
+
+<!-- <p>Home Square Footage</p>
 <Input type="number" placeholder="number placeholder" />
 <br/>
 <Input type="range" min={0} max={100} step={10} placeholder="range placeholder" />
 <p>Basement</p>
 <Input type="checkbox" placeholder="number placeholder" />
-<p>Amount</p>
+<p>Amount</p> -->
