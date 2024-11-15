@@ -9,23 +9,11 @@
 </script>
 
 <style>
-    :global(body) {
-        font-family: Arial, sans-serif;
-        background-color: #f8f9fa;
-        color: #333;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
-
     .component-container {
         background-color: #fff;
         padding: 2rem;
         border-radius: 15px;
-        max-width: 400px;
-        width: 100%;
+        width: 300px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         transform: translateY(20px);
         opacity: 0;

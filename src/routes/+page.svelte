@@ -1,8 +1,9 @@
 <script>
-    import Control from "../lib/Control.svelte"
+    import Main from "$lib/Main.svelte";
+import Control from "../lib/Control.svelte"
 </script>
 
-<Control></Control>
+<Main></Main>
 
 <!-- <p>Home Square Footage</p>
 <Input type="number" placeholder="number placeholder" />
