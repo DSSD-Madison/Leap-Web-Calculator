@@ -1,10 +1,20 @@
 <script>
+    import { writable } from 'svelte/store';
+    export let estimatedCost = writable(0);
+
     let mainSquareFootage = 1000;
     let hasBasement = false;
     let basementSquareFootage = 500;
 
-    function handleFormSubimission() {
-        console.log(mainSquareFootage / 2);
+    function handleFormSubmission() {
+        const totalSquareFootage = mainSquareFootage + (hasBasement ? basementSquareFootage : 0);
+        let cost = 400;
+
+        if (totalSquareFootage > 2000) {
+            cost += (totalSquareFootage - 2000) * 0.20;
+        }
+
+        estimatedCost.set(cost); // Update the store
     }
 </script>
 
@@ -222,6 +232,5 @@
             />
         </div>
     <!-- {/if} -->
-
-    <button on:click={handleFormSubimission} class="submit-btn">Submit</button>
+<button on:click={handleFormSubmission} class="submit-btn">Submit</button>
 </div>
