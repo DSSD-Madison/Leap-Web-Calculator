@@ -24,12 +24,13 @@
         padding: 2rem;
         border-radius: 15px;
         width: 300px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         transform: translateY(20px);
         opacity: 0;
         animation: fadeInUp 0.5s ease forwards;
         overflow: hidden;
         transition: height 0.4s ease;
+        color: #545444;
+        border: 2px solid #edf5fd;
     }
 
     @keyframes fadeInUp {
@@ -46,9 +47,8 @@
 
     .form-title {
         font-size: 1.1rem;
-        color: #333;
         margin-bottom: 0.5rem;
-        font-weight: 600;
+        font-weight: bold;
     }
 
     .slider-input-group {
@@ -60,15 +60,16 @@
     input[type="number"] {
         width: 100%;
         padding: 0.5rem;
-        border: 2px solid #ced4da;
+        border: 2px solid #edf5fd;
         border-radius: 8px;
         outline: none;
         font-size: 1rem;
         transition: 250ms;
+        font-family: Poppins;
     }
 
     input[type="number"]:hover {
-        border-color: #007bff;
+        border-color: #ffd15c;
     }
 
     input[type="range"] {
@@ -100,8 +101,8 @@
         width: 12px;
         background-color: #fff;
         border-radius: 50%;
-        border: 2px solid #007bff;
-        box-shadow: -407px 0 0 400px #007bff;
+        border: 2px solid #ffd15c;
+        box-shadow: -407px 0 0 400px #ffd15c;
     }
 
     input[type="range"]::-moz-range-thumb {
@@ -109,8 +110,8 @@
         width: 12px;
         background-color: #fff;
         border-radius: 50%;
-        border: 1px solid #007bff;
-        box-shadow: -407px 0 0 400px #007bff;
+        border: 1px solid #ffd15c;
+        box-shadow: -407px 0 0 400px #ffd15c;
     }
 
     .checkbox-group {
@@ -119,6 +120,7 @@
         align-items: center;
         gap: 0.5rem;
         transition: all 0.3s ease;
+        flex-direction: row;
     }
     .checkbox-container {
         display: flex;
@@ -126,15 +128,9 @@
         justify-content: center;
     }
 
-    .checkbox-group input[type="checkbox"] {
-        height: 1rem;
-        width: 1rem;
-    }
-
-
     .checkbox-label {
         font-size: 1rem;
-        color: #333;
+        color: #545444;
         transition: color 0.3s ease;
         cursor: pointer;
     }
@@ -145,18 +141,18 @@
         font-size: 1rem;
         font-weight: bold;
         color: white;
-        background-color: #007bff;
+        background-color: #ffd15c;
         border: none;
         border-radius: 8px;
         cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.2s ease;
+        transition: 250ms;
         text-align: center;
         outline: none;
+        font-family: Poppins;
     }
 
     .submit-btn:hover {
-        background-color: #0056b3;
-        transform: scale(1.03);
+        filter: brightness(0.95);
     }
 
     .basement-group {
@@ -168,6 +164,7 @@
     .has-basement .basement-group {
         opacity: 1;
         transform: translateY(0);
+        transition: 250ms;
     }
 
     .component-container.has-basement {
@@ -177,7 +174,7 @@
 
 <div class="component-container {hasBasement ? 'has-basement' : ''}">
     <div class="form-group">
-        <div class="form-title">Main Square Footage</div>
+        <h1 class="form-title">Main Square Footage</h1>
         <div class="slider-input-group">
             <input
                 type="number"
@@ -200,37 +197,17 @@
     <div class="form-group checkbox-group">
         <label for="hasBasement" class="checkbox-label">Has Basement?</label>
         <div class="checkbox-container">
-            <input
-                    type="checkbox"
-                    bind:checked={hasBasement}
-                    id="hasBasement"
-                    aria-describedby="basementDescription"
-            />
+            <input type="checkbox" bind:checked={hasBasement} id="hasBasement" aria-describedby="basementDescription"/>
         </div>
     </div>
 
-
-    <!-- {#if hasBasement} -->
         <div class="form-group basement-group">
             <div class="form-title">Basement Square Footage</div>
             <div class="slider-input-group">
-                <input
-                    type="number"
-                    bind:value={basementSquareFootage}
-                    min="100"
-                    max="5000"
-                    aria-label="Basement Square Footage"
-                />
+                <input disabled={!hasBasement} type="number" bind:value={basementSquareFootage} min="100" max="5000" aria-label="Basement Square Footage"/>
             </div>
             <br />
-            <input
-                    type="range"
-                    min="100"
-                    max="5000"
-                    bind:value={basementSquareFootage}
-                    aria-label="Basement Square Footage Slider"
-            />
+            <input disabled={!hasBasement} type="range" min="100" max="5000" bind:value={basementSquareFootage} aria-label="Basement Square Footage Slider"/>
         </div>
-    <!-- {/if} -->
 <button on:click={handleFormSubmission} class="submit-btn">Submit</button>
 </div>

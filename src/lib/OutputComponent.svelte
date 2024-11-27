@@ -9,22 +9,35 @@
 </script>
 
 <div class="estimated-cost">
-  <p>ESTIMATED COSTS:<br /></p>
+  <p>Estimated Costs:<br /></p>
   <p>$<span>{cost}</span></p>
 </div>
 
 <style>
   .estimated-cost {
-      background-color: #007bff;
+      background-color: #ffd15c;
       border-radius: 10px;
       padding: 10px;
       text-align: center;
+      font-size: 1rem;
       font-weight: bold;
       color: white;
       width: 350px;
+      font-family: Poppins;
+      cursor: default;
+      animation: fadeInUp 0.5s ease forwards;
+      transform: translateY(20px);
+      opacity: 0;
   }
 
   p {
       margin: 0;
   }
+
+  @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 </style>
