@@ -159,6 +159,7 @@
         opacity: 0;
         transform: translateY(-10px);
         transition: opacity 0.3s ease, transform 0.3s ease;
+        cursor: default;
     }
 
     .has-basement .basement-group {
