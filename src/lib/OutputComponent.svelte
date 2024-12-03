@@ -10,7 +10,7 @@
 
 <div class="estimated-cost">
   <p>Estimated Costs:<br /></p>
-  <p>$<span>{cost}</span></p>
+  <p>$<span>{cost.toFixed(2)}</span></p>
 </div>
 
 <style>
