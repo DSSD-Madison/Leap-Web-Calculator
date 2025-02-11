@@ -26,22 +26,22 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18 # or your preferred version
+          node-version: 18
 
       - name: Install dependencies
-        run: npm install # or yarn install
+        run: npm install
 
       - name: Build Svelte app
-        run: npm run build # or yarn build
+        run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: github-pages
-          path: build
+          path: .svelte-kit/build
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
         with:
           artifact-name: github-pages
-          folder: build
+          folder: .svelte-kit/build
