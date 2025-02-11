@@ -3,12 +3,12 @@
   import Control from './Control.svelte';
   import OutputComponent from './OutputComponent.svelte';
   import Navbar from './Navbar.svelte';
-  import favicon from './images/favicon.png';
+  // import favicon from './images/favicon.png';
 
   let estimatedCost = writable(0);
 </script>
 
-<svelte:head><link rel="icon" type="image/x-icon" href={favicon}/></svelte:head>
+<!-- <svelte:head><link rel="icon" type="image/x-icon" href={favicon}/></svelte:head> -->
   
 <main>
   <Navbar/>

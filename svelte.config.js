@@ -1,13 +1,18 @@
-import adapter from '@sveltejs/adapter-static'; // Change this line
+import adapter from "@sveltejs/adapter-static";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-    kit: {
-        adapter: adapter(),
-        paths: {
-            base: process.env.NODE_ENV === 'production' ? '/Leap-Web-Calculator' : ''
-        }
+  kit: {
+    adapter: adapter({
+      fallback: false
+    }),
+    prerender: {
+      entries: ['*']
+    },
+    paths: {
+      base: process.env.NODE_ENV === "production" ? "/Leap-Web-Calculator" : "",
     }
+  }
 };
 
 export default config;
