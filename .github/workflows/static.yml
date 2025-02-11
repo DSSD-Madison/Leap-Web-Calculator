@@ -38,10 +38,10 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: github-pages
-          path: dist # or build
+          path: build
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
         with:
           artifact-name: github-pages
-          folder: dist # or build
+          folder: build

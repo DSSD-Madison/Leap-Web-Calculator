@@ -1,11 +1,11 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-static'; // Change this line
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
     kit: {
         adapter: adapter(),
-        alias: {
-            $lib: 'src/lib'
+        paths: {
+            base: process.env.NODE_ENV === 'production' ? '/Leap-Web-Calculator' : ''
         }
     }
 };
