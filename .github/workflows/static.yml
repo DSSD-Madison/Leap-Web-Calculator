@@ -34,8 +34,14 @@ jobs:
       - name: Build Svelte app
         run: npm run build # or yarn build
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: github-pages
+          path: dist # or build
+
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
         with:
-          # The directory where your Svelte app's build output is located
+          artifact-name: github-pages
           folder: dist # or build
