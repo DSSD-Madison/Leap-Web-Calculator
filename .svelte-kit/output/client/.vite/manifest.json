@@ -1,0 +1,135 @@
+{
+  ".svelte-kit/generated/client-optimized/app.js": {
+    "file": "_app/immutable/entry/app.gj5UTp2d.js",
+    "name": "entry/app",
+    "src": ".svelte-kit/generated/client-optimized/app.js",
+    "isEntry": true,
+    "imports": [
+      "_B1ilbWz5.js",
+      "_DYCinwD4.js",
+      "_CnVJiNRs.js",
+      "_BTtPy-0W.js",
+      "_BaqAp48U.js"
+    ],
+    "dynamicImports": [
+      ".svelte-kit/generated/client-optimized/nodes/0.js",
+      ".svelte-kit/generated/client-optimized/nodes/1.js",
+      ".svelte-kit/generated/client-optimized/nodes/2.js"
+    ]
+  },
+  ".svelte-kit/generated/client-optimized/nodes/0.js": {
+    "file": "_app/immutable/nodes/0.BkJdVOvH.js",
+    "name": "nodes/0",
+    "src": ".svelte-kit/generated/client-optimized/nodes/0.js",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_CnVJiNRs.js",
+      "_B1ilbWz5.js"
+    ]
+  },
+  ".svelte-kit/generated/client-optimized/nodes/1.js": {
+    "file": "_app/immutable/nodes/1.CuUW58KG.js",
+    "name": "nodes/1",
+    "src": ".svelte-kit/generated/client-optimized/nodes/1.js",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_CnVJiNRs.js",
+      "_BJNkX9iD.js",
+      "_B1ilbWz5.js",
+      "_DYCinwD4.js",
+      "_B6Uhg7hK.js"
+    ]
+  },
+  ".svelte-kit/generated/client-optimized/nodes/2.js": {
+    "file": "_app/immutable/nodes/2.VJEZ4ll1.js",
+    "name": "nodes/2",
+    "src": ".svelte-kit/generated/client-optimized/nodes/2.js",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_CnVJiNRs.js",
+      "_BJNkX9iD.js",
+      "_B1ilbWz5.js",
+      "_DYCinwD4.js",
+      "_TLGeEo_2.js",
+      "_BTtPy-0W.js"
+    ],
+    "css": [
+      "_app/immutable/assets/2.Cit6JvtO.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/LEAP-logo-transparent.B3FTlTvZ.png"
+    ]
+  },
+  "_B1ilbWz5.js": {
+    "file": "_app/immutable/chunks/B1ilbWz5.js",
+    "name": "runtime"
+  },
+  "_B6Uhg7hK.js": {
+    "file": "_app/immutable/chunks/B6Uhg7hK.js",
+    "name": "entry",
+    "imports": [
+      "_B1ilbWz5.js",
+      "_TLGeEo_2.js",
+      "_BaqAp48U.js"
+    ]
+  },
+  "_BJNkX9iD.js": {
+    "file": "_app/immutable/chunks/BJNkX9iD.js",
+    "name": "legacy",
+    "imports": [
+      "_B1ilbWz5.js"
+    ]
+  },
+  "_BTtPy-0W.js": {
+    "file": "_app/immutable/chunks/BTtPy-0W.js",
+    "name": "props",
+    "imports": [
+      "_B1ilbWz5.js"
+    ]
+  },
+  "_BaqAp48U.js": {
+    "file": "_app/immutable/chunks/BaqAp48U.js",
+    "name": "index-client",
+    "imports": [
+      "_B1ilbWz5.js"
+    ]
+  },
+  "_CnVJiNRs.js": {
+    "file": "_app/immutable/chunks/CnVJiNRs.js",
+    "name": "disclose-version",
+    "imports": [
+      "_B1ilbWz5.js"
+    ]
+  },
+  "_DYCinwD4.js": {
+    "file": "_app/immutable/chunks/DYCinwD4.js",
+    "name": "render",
+    "imports": [
+      "_B1ilbWz5.js",
+      "_CnVJiNRs.js"
+    ]
+  },
+  "_TLGeEo_2.js": {
+    "file": "_app/immutable/chunks/TLGeEo_2.js",
+    "name": "index",
+    "imports": [
+      "_B1ilbWz5.js"
+    ]
+  },
+  "node_modules/@sveltejs/kit/src/runtime/client/entry.js": {
+    "file": "_app/immutable/entry/start.DriflSJ5.js",
+    "name": "entry/start",
+    "src": "node_modules/@sveltejs/kit/src/runtime/client/entry.js",
+    "isEntry": true,
+    "imports": [
+      "_B6Uhg7hK.js"
+    ]
+  },
+  "src/lib/images/LEAP-logo-transparent.png": {
+    "file": "_app/immutable/assets/LEAP-logo-transparent.B3FTlTvZ.png",
+    "src": "src/lib/images/LEAP-logo-transparent.png"
+  }
+}

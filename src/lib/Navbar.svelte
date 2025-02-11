@@ -1,3 +1,6 @@
+<script>
+import image from './images/LEAP-logo-transparent.png';
+</script>
 <style>
     .logo {
         transform: scale(0.1);
@@ -16,5 +19,5 @@
 </style>
 
 <div class="navbar">
-    <img class="logo" src="../src/images/LEAP-logo-transparent.png" alt="LEAP Logo">
+    <img class="logo" src={image} alt="LEAP Logo">
 </div>
